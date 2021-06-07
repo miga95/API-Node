@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 
 const userSchema = new mongoose.Schema(
     {
-        pseudo : {
+        username : {
             type: String,
             required: true,
             minLength: 3,
@@ -26,26 +26,9 @@ const userSchema = new mongoose.Schema(
             max: 1024,
             minLength: 6,
         },
-        picture: {
+        rib: {
             type: String,
-            default: "./uploads/profil/random-user.png"
         },
-        bio: {
-            type: String,
-            max: 1024
-        },
-        followers: {
-            type: [String]
-        },
-        following:{
-            type: [String]
-        },
-        likes: {
-            type: [String]
-        },
-    },
-    {
-        timestamps: true,
     }
 );
 
