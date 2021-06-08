@@ -18,6 +18,7 @@ module.exports.userInfo =  (req, res) => {
     
 }
 
+
 module.exports.updateUser =  async (req, res) => {
     
     if(!ObjectID.isValid(req.params.id))
@@ -28,7 +29,8 @@ module.exports.updateUser =  async (req, res) => {
             {_id: req.params.id},
             { 
                 $set: {
-                    username: req.body.username
+                    username: req.body.username,
+                    rib : req.body.rib
                 }
             },
             {new :true, upsert: true, setDefaultsOnInsert: true },
