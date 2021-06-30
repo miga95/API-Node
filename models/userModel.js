@@ -29,6 +29,10 @@ const userSchema = new mongoose.Schema(
         rib: {
             type: String,
         },
+        likes: {
+            type: [String],
+        },
+        
     }
 );
 
