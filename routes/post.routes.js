@@ -8,4 +8,7 @@ router.delete('/:id', postController.deletePost);
 router.patch('/like-post/:id', postController.likePost);
 router.patch('/unlike-post/:id', postController.unlikePost)
 
+//comments
+//router.patch('/delete-comment-post/:id', postController.deleteCommentPost)
+
 module.exports = router;
